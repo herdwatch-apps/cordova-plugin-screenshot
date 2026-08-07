@@ -1,6 +1,6 @@
 {
   "name": "@herdwatch/cordova-plugin-screenshot",
-  "version": "0.1.8",
+  "version": "0.1.8-fix.1",
   "description": "screenshot PhoneGap Plugin for Android",
   "publishConfig": {
     "access": "public",
