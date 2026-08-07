@@ -1,6 +1,17 @@
 cordova-screenshot
 ==================
 
+## Why this fork exists
+
+Forked from [upstream](https://github.com/gitawego/cordova-screenshot) because saving a screenshot needed to keep working on Android 13+ (SDK 33), where the old `WRITE_EXTERNAL_STORAGE` permission check no longer applies.
+
+Published as [`@herdwatch/cordova-plugin-screenshot`](https://www.npmjs.com/package/@herdwatch/cordova-plugin-screenshot).
+
+Changes from upstream:
+- Skip the `WRITE_EXTERNAL_STORAGE` permission check on Android SDK >= 33 (`src/android/Screenshot.java`), since that permission is no longer granted/needed under scoped storage and the old check would otherwise block saving.
+- Dropped macOS/OSX platform support (removed the `osx` block from `plugin.xml` and deleted `src/osx/Screenshot.h`/`.m`).
+- Republished under the `@herdwatch` npm scope, with a corrected `engines` field and plugin display name/description in `plugin.xml`.
+
 [![NPM version](http://img.shields.io/npm/v/@herdwatch/cordova-plugin-screenshot.svg?style=flat)](https://www.npmjs.com/package/@herdwatch/cordova-plugin-screenshot)
 
 
